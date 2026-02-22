@@ -254,6 +254,8 @@ I --> J["🌐 Streamlit Web App"]
 %% Feedback Loop
 J --> A
 
+```
+
 # 9️⃣ Deployment
 
 The final model was deployed using Streamlit.
@@ -299,7 +301,6 @@ By optimizing the threshold, the model prioritizes business-sensitive recall ove
 - Ensemble stacking approaches
 - Integration into CRM systems
 
-```markdown
 ## 📂 Project Structure
 
 ```text
