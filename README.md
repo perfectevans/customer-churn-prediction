@@ -9,7 +9,6 @@
 An end-to-end machine learning system designed to predict customer churn in a telecom company.  
 The project includes data preprocessing, model comparison, hyperparameter tuning, threshold optimization, SHAP explainability, and deployment using Streamlit.
 
----
 ## 🌐 Live Demo
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-link-here)
@@ -32,8 +31,6 @@ The challenge is to build a predictive system that can:
 - Provide interpretable explanations.
 - Align with business objectives (minimizing revenue loss).
 
----
-
 # 2️⃣ Project Objective
 
 The primary objective of this project is:
@@ -47,8 +44,6 @@ Specific goals:
 - Tune decision thresholds based on business impact.
 - Explain model predictions using SHAP.
 - Deploy the final model in an interactive web application.
-
----
 
 # 3️⃣ Dataset Description
 
@@ -85,8 +80,6 @@ Specific goals:
 
 The dataset exhibits class imbalance, with non-churners being the majority class.
 
----
-
 # 4️⃣ Methodology
 
 ## 4.1 Data Cleaning
@@ -107,8 +100,6 @@ Key exploratory findings:
 
 Correlation analysis and churn-rate-by-category plots guided feature understanding.
 
----
-
 ## 4.3 Preprocessing Pipeline
 
 A `ColumnTransformer` was used to:
@@ -122,8 +113,6 @@ This ensures:
 - Reproducibility
 - Deployment consistency
 - No data leakage
-
----
 
 ## 4.4 Model Development & Comparison
 
@@ -145,8 +134,6 @@ Evaluation metrics:
 
 In churn prediction, false negatives (missed churners) are often more costly than false positives. Therefore, recall for the churn class was prioritized.
 
----
-
 # 📊 Model Comparison
 
 | Model               | Accuracy | Precision (Churn) | Recall (Churn) | F1-Score | ROC-AUC |
@@ -154,7 +141,7 @@ In churn prediction, false negatives (missed churners) are often more costly tha
 | Logistic Regression | 0.80     | 0.65              | 0.57           | 0.61     | 0.83     |
 | Random Forest       | 0.79     | 0.62              | 0.49           | 0.55     | 0.82     |
 | XGBoost             | 0.77     | 0.55              | 0.68           | 0.61     | 0.82     |
-| **Tuned Random Forest** | **0.73–0.78*** | **0.49–0.58** | **0.80** | **0.61** | **0.84** |
+| **Tuned Random Forest** | **0.73** | **0.49** | **0.80** | **0.61** | **0.84** |
 
 *Performance varies slightly depending on threshold selection.
 
@@ -174,8 +161,6 @@ Best performing configuration resulted in:
 - Improved recall stability
 - Better generalization
 
----
-
 # 6️⃣ Threshold Optimization
 
 The default threshold (0.5) was not assumed optimal.
@@ -192,8 +177,6 @@ Financial analysis demonstrated that optimizing the decision threshold significa
 
 This step aligned the model with business objectives rather than pure statistical optimization.
 
----
-
 # 7️⃣ Final Model Performance
 
 **Selected Model:** Tuned Random Forest
@@ -209,8 +192,6 @@ The tuned Random Forest demonstrated:
 - Strong ranking ability
 - Robust recall
 - Controlled overfitting
-
----
 
 # 📈 Model Performance Visualizations
 
@@ -246,23 +227,31 @@ Top drivers reducing churn probability:
 
 These findings provide actionable business insights for targeted retention strategies and enhance stakeholder trust and supports actionable decision-making.
 
----
-
 ## 🔄 System Architecture
 
-```mermaid
-graph LR
-A[Raw Data] --> B[Data Cleaning]
-B --> C[Feature Engineering]
-C --> D[ColumnTransformer Pipeline]
-D --> E[Model Training (RF, XGB, LR)]
-E --> F[Hyperparameter Tuning]
-F --> G[Threshold Optimization]
-G --> H[Final Tuned Random Forest]
-H --> I[SHAP Explainability]
-I --> J[Streamlit Web App Deployment]
+flowchart LR
+
+%% Data Layer
+A["📂 Raw Data"] --> B["🧹 Data Cleaning"]
+B --> C["🛠️ Feature Engineering"]
+
+%% Pipeline Layer
+C --> D["⚙️ ColumnTransformer Pipeline"]
+
+%% Modeling Layer
+D --> E["🤖 Model Training"]
+E --> F["🎯 Hyperparameter Tuning"]
+F --> G["📊 Threshold Optimization"]
+
+%% Final Model
+G --> H["🌲 Final Tuned Random Forest"]
+
+%% Explainability + Deployment
+H --> I["🔎 SHAP Explainability"]
+I --> J["🌐 Streamlit Web App"]
+
+%% Feedback Loop
 J --> A
-```
 
 # 9️⃣ Deployment
 
@@ -309,7 +298,7 @@ By optimizing the threshold, the model prioritizes business-sensitive recall ove
 - Ensemble stacking approaches
 - Integration into CRM systems
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 churn-project/
 │
