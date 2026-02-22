@@ -136,12 +136,11 @@ In churn prediction, false negatives (missed churners) are often more costly tha
 
 # 📊 Model Comparison
 
-| Model               | Accuracy | Precision (Churn) | Recall (Churn) | F1-Score | ROC-AUC |
-|---------------------|----------|-------------------|----------------|----------|----------|
-| Logistic Regression | 0.80     | 0.65              | 0.57           | 0.61     | 0.83     |
-| Random Forest       | 0.79     | 0.62              | 0.49           | 0.55     | 0.82     |
-| XGBoost             | 0.77     | 0.55              | 0.68           | 0.61     | 0.82     |
-| **Tuned Random Forest** | **0.73** | **0.49** | **0.80** | **0.61** | **0.84** |
+| Model                     | Accuracy | Precision (Churn) | Recall (Churn) | F1-Score | ROC-AUC |
+|---------------------------|----------|-------------------|----------------|----------|----------|
+| Logistic Regression       | 0.80     | 0.65              | 0.57           | 0.61     | 0.83     |
+| XGBoost                   | 0.77     | 0.55              | 0.68           | 0.61     | 0.82     |
+| **Tuned Random Forest**   | **0.73** | **0.49**          | **0.80**       | **0.61** | **0.84** |
 
 *Performance varies slightly depending on threshold selection.
 
