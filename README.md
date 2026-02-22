@@ -229,6 +229,7 @@ These findings provide actionable business insights for targeted retention strat
 
 ## 🔄 System Architecture
 
+```mermaid
 flowchart LR
 
 %% Data Layer
@@ -298,8 +299,10 @@ By optimizing the threshold, the model prioritizes business-sensitive recall ove
 - Ensemble stacking approaches
 - Integration into CRM systems
 
+```markdown
 ## 📂 Project Structure
 
+```text
 churn-project/
 │
 ├── app.py
@@ -313,7 +316,7 @@ churn-project/
 │
 └── assets/
     ├── confusion_matrix.png
-    ├── roc_curve.png
+    └── roc_curve.png
 
 Overall, this project demonstrates the importance of model comparison, threshold optimization, and explainability in building deployable, business-aligned machine learning systems.
 
